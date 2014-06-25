@@ -53,6 +53,9 @@ ANNE_LIST *anne_list_append(ANNE_LIST *list, void *data) {
 	return anne_list_first(list);
 }
 
+/**
+ * Somewhat predictably prepends an item onto a list.
+ */
 ANNE_LIST *anne_list_prepend(ANNE_LIST *list, void *data) {
 	ANNE_LIST *new_item = malloc(sizeof(*new_item));
 	new_item->data = data;
@@ -67,6 +70,9 @@ ANNE_LIST *anne_list_prepend(ANNE_LIST *list, void *data) {
 	return list;
 }
 
+/**
+ * Switches the position of two items in a list.
+ */
 ANNE_LIST *anne_list_swap(ANNE_LIST *a, ANNE_LIST *b) {
 	printf("wat %i\n", *((int *) a->data));
 	void *temp;
@@ -83,6 +89,6 @@ ANNE_LIST *anne_list_swap(ANNE_LIST *a, ANNE_LIST *b) {
  *	return true if the first is higher.
  */
 ANNE_LIST *anne_list_sort_insertion(ANNE_LIST *list, void (*compare_func)()) {
-
+	//TODO: this feature
 	return list;
 }
